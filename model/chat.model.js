@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const ChatSchema = mongoose.Schema(
   {
-    ChatName: {
+    chatName: {
       type: String,
       required: true,
       trim: true,
@@ -16,12 +16,12 @@ const ChatSchema = mongoose.Schema(
       trim: true,
       lowercase: true,
     },
-    ListOfParticipants: {
+    listOfParticipants: {
       type: Array,
       required: true,
       trim: true,
     },
-    ChatAvatar: {
+    chatAvatar: {
       type: String,
       required: false,
       trim: true,

@@ -2,17 +2,17 @@ const mongoose = require("mongoose");
 
 const NotificationSchema = mongoose.Schema(
   {
-    Sender: {
+    sender: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-    Receiver: {
+    receiver: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-    Type: {
+    type: {
       type: String,
       enum: [
         "FriendRequest",
@@ -24,12 +24,12 @@ const NotificationSchema = mongoose.Schema(
       trim: true,
       lowercase: true,
     },
-    Content: {
+    content: {
       type: String,
       required: true,
       trim: true,
     },
-    Seen: {
+    seen: {
       type: Boolean,
       required: true,
       default: false,

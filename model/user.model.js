@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const UserSchema = mongoose.Schema(
   {
-    Username: {
+    username: {
       type: String,
       required: true,
       trim: true,
@@ -10,31 +10,31 @@ const UserSchema = mongoose.Schema(
       minlength: 3,
       lowercase: true,
     },
-    Password: {
+    password: {
       type: String,
       required: true,
       trim: true,
     },
-    Email: {
+    email: {
       type: String,
       required: true,
       trim: true,
       unique: true,
       lowercase: true,
     },
-    ProfilePicture: {
+    profilePicture: {
       type: String,
       required: false,
       trim: true,
       default:
         "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
     },
-    OnlineStatus: {
+    onlineStatus: {
       type: Boolean,
       required: true,
       default: false,
     },
-    LastActive: {
+    lastActive: {
       type: Date,
       required: true,
       default: Date.now,

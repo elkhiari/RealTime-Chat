@@ -2,17 +2,17 @@ const mongoose = require("mongoose");
 
 const FriendshipSchema = mongoose.Schema(
   {
-    User1: {
+    user1: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-    User2: {
+    user2: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-    Status: {
+    status: {
       type: String,
       enum: ["Pending", "Accepted", "Declined"],
       required: true,
